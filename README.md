@@ -166,7 +166,6 @@ The game includes sound effects for:
 
 * Button interactions
 * Letter selection
-* General user feedback
 
 ---
 
