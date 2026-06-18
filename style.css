@@ -1,0 +1,192 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background-image: url("sprites/bg.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+canvas {
+    display: block;
+}
+
+.keys {
+    width: 40px;
+    height: 40px;
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+
+    text-shadow:
+        0 0 2px rgba(0, 0, 0, 0.8),
+        0 1px 3px rgba(0, 0, 0, 0.8);
+
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.2),
+        0 4px 12px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.25);
+
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.keys:hover {
+    background: rgba(255, 255, 255, 0.28);
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.3),
+        0 8px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.keys:active {
+    transform: translateY(1px);
+
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.2),
+        0 2px 6px rgba(0, 0, 0, 0.25),
+        inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.keys:disabled {
+    background: rgba(100, 100, 100, 0.25);
+    color: rgba(255, 255, 255, 0.55);
+    border-color: rgba(0, 0, 0, 0.2);
+
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.hint-button {
+    width: 60px;
+    height: 40px;
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+
+    text-shadow:
+        0 0 2px rgba(0, 0, 0, 0.8),
+        0 1px 3px rgba(0, 0, 0, 0.8);
+
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.2),
+        0 4px 12px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.25);
+
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.hint-button:hover {
+    background: rgba(255, 255, 255, 0.28);
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.3),
+        0 8px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.hint-button:active {
+    transform: translateY(1px);
+
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.2),
+        0 2px 6px rgba(0, 0, 0, 0.25),
+        inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hint-button:disabled {
+    background: rgba(100, 100, 100, 0.25);
+    color: rgba(255, 255, 255, 0.55);
+    border-color: rgba(0, 0, 0, 0.2);
+
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.play-again-button {
+    width: 100px;
+    height: 40px;
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+
+    text-shadow:
+        0 0 2px rgba(0, 0, 0, 0.8),
+        0 1px 3px rgba(0, 0, 0, 0.8);
+
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.2),
+        0 4px 12px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.25);
+
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.play-again-button:hover {
+    background: rgba(255, 255, 255, 0.28);
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.3),
+        0 8px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.play-again-button:active {
+    transform: translateY(1px);
+
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.2),
+        0 2px 6px rgba(0, 0, 0, 0.25),
+        inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.play-again-button:disabled {
+    background: rgba(100, 100, 100, 0.25);
+    color: rgba(255, 255, 255, 0.55);
+    border-color: rgba(0, 0, 0, 0.2);
+
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
